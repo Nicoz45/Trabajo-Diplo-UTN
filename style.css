@@ -33,7 +33,7 @@ a{
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.178);
 }
 
-header .header-left-content{
+.header-left-content{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,8 +60,17 @@ header .header-left-content{
 .navigation-links{
     display: flex;
     flex-direction: row;
+}
+
+.list__navigation__links{
+    display: flex;
+    flex-direction: row;
     gap: 32px;
-    font-weight: 350
+    font-weight: 400;
+}
+
+.navigation-links li{
+    list-style: none;
 }
 
 .navigation-buttons{
@@ -118,6 +127,7 @@ header a{
 /* section hero */
 
 .section-hero{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -127,14 +137,15 @@ header a{
 }
 
 .hero-general-container{
-    width: 100%;
+    width: 1480px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin: 0px 165px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0px 40px;
+    gap: 32px;
 }
 
 .info-content-container{
@@ -283,6 +294,7 @@ header a{
 
 /* section migrations */
 .general__section{
+    width: 100%;
     background-color: var(--background__color);
     color: #ffffff;
     display: flex;
@@ -425,6 +437,7 @@ header a{
 /* Footer section */
 
 .footer__content__general{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -448,6 +461,12 @@ header a{
     flex-direction: row;
     justify-content: space-between;
     margin: 0px 0px 40px;
+}
+
+.info__container__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
     gap: 8px;
 }
 
@@ -521,6 +540,7 @@ header a{
 .legal-links{
     display: flex;
     flex-direction: row;
+    justify-content: start;
     align-items: center;
     gap: 16px;
 }
@@ -528,6 +548,15 @@ header a{
 .footer__credit-card-container{
     display: flex;
     flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-methods__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
     gap: 8px;
 }
@@ -537,7 +566,7 @@ header a{
     width: 60px;
     height: 40px;
     border: 1px solid #d6e0ff;
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
 }
 
@@ -552,7 +581,7 @@ header a{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    border-top: solid 1px #d6e0ff;
+    border-top: solid 1px #d5dfff;
     padding: 24px 0px;
 }
 
@@ -578,11 +607,15 @@ header a{
         width: 454px;
     }
     .hero-general-container{
-        width: 1208px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
-
+    .footer__content{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }    
 }
 
 @media screen and (max-width: 1140px){
@@ -599,11 +632,16 @@ header a{
         padding: 16px 0px 16px 20px;
     }
     .hero-general-container{
-        width: 1100px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+    .footer__content{
+        width: 100%;
+        margin-left: auto;
+        margin-left: auto;
     }
 }
 @media screen and (max-width: 1024px){
@@ -611,7 +649,7 @@ header a{
         padding: 62px 0px 80px;
     }
     .hero-general-container{
-        width: 768px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -648,14 +686,22 @@ header a{
     .text-large{
         font-size: 28px;
     }
+    .info__container__footer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 768px){
+    .general-header-container{
+        width: 100%;
+    }
     .section-hero{
         padding: 14px 0px 36px;
     }
     .hero-general-container{
-        width: 580px;
+        width: 100%;
     }
     .info-content-container{
         width: 100%;
@@ -692,7 +738,77 @@ header a{
     }
     .general__container{
         width: 100%;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer__content__general{
+        width: 100%;
+    }
+    .footer__content{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer__logo-section{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .footer__legal-links{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: auto;
+    }
+    .footer__copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-top: none;
+    }
+    .social-netwoorks-icons{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 16px 0px;
+        margin: 0px 0px 8px;
+        position: relative;
+        bottom: 50px;
+    }
+    .hostinger-logo__footer{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 50px;
+    }
+    .footer__credit-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        top: 30px;
+    }
+    .legal-links{
+        display: flex;
+        position: relative;
+        bottom: 100px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .footer__credit-card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        top: 70px;
+    }
+    .footer__copyright{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding-top: none;
     }
 }
